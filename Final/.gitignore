@@ -1,0 +1,33 @@
+# GITIGNORE template for Wwise Project
+
+.backup*
+.cache*
+*.akd
+*.prof
+*.wprof
+*.validationcache
+*.wsettings
+AkWwiseProjectData.asset
+IncrementalSoundBankData.xml
+
+# Local audio tools and generated Wwise output
+.tools/
+.venv/
+GeneratedSoundBanks/
+*.log
+__pycache__/
+*.py[cod]
+
+# Keep only the final audition; raw takes and earlier mixes stay local.
+/Preview/*
+!/Preview/Corridor_Expanded_Preview.wav
+
+# Submission archives and local editor/OS files
+*.zip
+*.7z
+*.rar
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+Desktop.ini

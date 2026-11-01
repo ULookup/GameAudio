@@ -1,0 +1,159 @@
+{
+  "format": "48 kHz / 24 bit PCM / stereo WAV",
+  "exports": [
+    {
+      "file": "Audio/Exports/AMB_Underground_Corridor_Loop_60s.wav",
+      "duration_seconds": 60.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "peak_dbfs": -13.47,
+      "rms_dbfs": -26.0,
+      "sources": [
+        {
+          "file": "474458__ecfike__concrete-hallway-with-air-conditioner.wav",
+          "start_seconds": 16.0,
+          "end_seconds": 80.0
+        },
+        {
+          "file": "569432__sheyvan__machinery-ventilation-running-1-1.wav",
+          "start_seconds": 1.0,
+          "end_seconds": 24.0
+        }
+      ],
+      "processing": {
+        "hallway_highpass_hz": 35,
+        "hallway_lowpass_hz": 6500,
+        "machine_highpass_hz": 70,
+        "machine_lowpass_hz": 1700,
+        "hallway_layer_rms_dbfs": -26,
+        "machine_layer_rms_dbfs": -39,
+        "machine_crossfade_seconds": 2,
+        "final_crossfade_seconds": 4,
+        "crossfade_type": "equal_power",
+        "final_rms_dbfs": -26,
+        "mono_machine_conversion": "duplicate mono to L and R"
+      }
+    },
+    {
+      "file": "Audio/Exports/SFX_Pipe_Resonance_01.wav",
+      "duration_seconds": 2.95,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "peak_dbfs": -16.0,
+      "rms_dbfs": -32.31,
+      "sources": [
+        {
+          "file": "824117__derjuli__metalpipe.wav",
+          "start_seconds": 3.55,
+          "end_seconds": 6.5
+        }
+      ],
+      "processing": {
+        "highpass_hz": 100,
+        "lowpass_hz": 4200,
+        "fade_in_seconds": 0.06,
+        "fade_out_seconds": 0.45,
+        "peak_target_dbfs": -16,
+        "transient_soft_limit_rms_ratio": 5.5
+      }
+    },
+    {
+      "file": "Audio/Exports/SFX_Pipe_Resonance_02.wav",
+      "duration_seconds": 2.87,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "peak_dbfs": -17.0,
+      "rms_dbfs": -31.85,
+      "sources": [
+        {
+          "file": "824117__derjuli__metalpipe.wav",
+          "start_seconds": 15.78,
+          "end_seconds": 18.65
+        }
+      ],
+      "processing": {
+        "highpass_hz": 100,
+        "lowpass_hz": 3800,
+        "fade_in_seconds": 0.05,
+        "fade_out_seconds": 0.5,
+        "peak_target_dbfs": -17,
+        "transient_soft_limit_rms_ratio": 5.5
+      }
+    },
+    {
+      "file": "Audio/Exports/SFX_Pipe_Resonance_03.wav",
+      "duration_seconds": 3.54,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "peak_dbfs": -15.0,
+      "rms_dbfs": -32.68,
+      "sources": [
+        {
+          "file": "824117__derjuli__metalpipe.wav",
+          "start_seconds": 26.36,
+          "end_seconds": 29.9
+        }
+      ],
+      "processing": {
+        "highpass_hz": 100,
+        "lowpass_hz": 4000,
+        "fade_in_seconds": 0.07,
+        "fade_out_seconds": 0.65,
+        "peak_target_dbfs": -15,
+        "transient_soft_limit_rms_ratio": 5.5
+      }
+    },
+    {
+      "file": "Audio/Exports/SFX_Metal_Creak_01.wav",
+      "duration_seconds": 1.9,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "peak_dbfs": -18.0,
+      "rms_dbfs": -32.57,
+      "sources": [
+        {
+          "file": "172158__eaglestealthteam__creaking-metal-desk.wav",
+          "start_seconds": 5.35,
+          "end_seconds": 7.25
+        }
+      ],
+      "processing": {
+        "highpass_hz": 160,
+        "lowpass_hz": 4200,
+        "fade_in_seconds": 0.12,
+        "fade_out_seconds": 0.22,
+        "peak_target_dbfs": -18,
+        "transient_soft_limit_rms_ratio": null
+      }
+    },
+    {
+      "file": "Audio/Exports/SFX_Metal_Creak_02.wav",
+      "duration_seconds": 3.55,
+      "sample_rate": 48000,
+      "channels": 2,
+      "subtype": "PCM_24",
+      "peak_dbfs": -18.0,
+      "rms_dbfs": -31.55,
+      "sources": [
+        {
+          "file": "172158__eaglestealthteam__creaking-metal-desk.wav",
+          "start_seconds": 46.8,
+          "end_seconds": 50.35
+        }
+      ],
+      "processing": {
+        "highpass_hz": 160,
+        "lowpass_hz": 4000,
+        "fade_in_seconds": 0.15,
+        "fade_out_seconds": 0.35,
+        "peak_target_dbfs": -18,
+        "transient_soft_limit_rms_ratio": null
+      }
+    }
+  ]
+}

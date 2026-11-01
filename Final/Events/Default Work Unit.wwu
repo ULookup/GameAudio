@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Corridor_Ambience" ID="{702AE505-415D-4CE5-9532-E53B17E60843}">
+					<ChildrenList>
+						<Action Name="" ID="{6F08E560-7945-42F7-B976-78545B9757B8}" ShortID="1024780223">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Underground_Corridor" ID="{257A6C87-198E-4794-802A-291AC1DBF011}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Corridor_Ambience" ID="{CDBAD4E2-B8BC-4054-8366-7FF38CA2F969}">
+					<ChildrenList>
+						<Action Name="" ID="{A0758578-6273-4E3A-A82E-323B2703B86C}" ShortID="515250230">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Underground_Corridor" ID="{257A6C87-198E-4794-802A-291AC1DBF011}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bed_Only" ID="{A982659F-FE6F-437D-9BCA-B87BB7C97D3E}">
+					<ChildrenList>
+						<Action Name="" ID="{EC3F3D0E-D829-4331-BF4F-992B2E521010}" ShortID="916905375">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Atmosphere_Layers" ID="{A7F96C01-B7B5-47B0-8CAE-47EDC73D476B}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CFEE1495-38E4-4C77-9513-CD10208E0C19}" ShortID="161989918">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Corridor_Bed_60s" ID="{7CC9B119-FE0E-4250-BD22-C68348229798}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Random_Only" ID="{F1B1A1B8-B833-47D8-8A58-D83CFA341AA6}">
+					<ChildrenList>
+						<Action Name="" ID="{BFCD8B3C-8AFC-4131-ADD9-19B2DCDFAF9F}" ShortID="671492095">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RND_Pipe_And_Metal" ID="{EE8F9704-EBA1-4088-9382-7CE29E9AE3CD}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Distant_Mechanism_Only" ID="{D6ED4E8B-0123-4D21-8778-AC15D8B542D0}">
+					<ChildrenList>
+						<Action Name="" ID="{9EA5CEF7-F289-44C5-A09F-FCEE8608ED64}" ShortID="286533231">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RND_Distant_Mechanism" ID="{D4722062-057D-4B62-B9F5-26A624F007A7}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Deep_Ventilation_Only" ID="{3C85BC9F-BAB2-469B-8F67-1A1990CB8090}">
+					<ChildrenList>
+						<Action Name="" ID="{1275CA13-2F43-4982-88CD-2C01FBA2E716}" ShortID="628703826">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Deep_Ventilation_Loop_64s" ID="{839ED10B-79BE-4D8E-919E-F138FD9664CD}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Space_Resonance_Only" ID="{13185EEE-6B9F-40FD-8E3E-CFC7E5BAAF19}">
+					<ChildrenList>
+						<Action Name="" ID="{CA676C92-3190-43A6-9BBA-F5CD4276CCE2}" ShortID="778638317">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Subtle_Space_Resonance_Loop_54s" ID="{F6F1344E-D364-459C-8655-6599A46CFF0D}" WorkUnitID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

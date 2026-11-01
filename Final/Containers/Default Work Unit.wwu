@@ -1,0 +1,933 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WwiseDocument Type="WorkUnit" ID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{2CF7B51A-7D6A-424E-A64E-780A3622C044}" PersistMode="Standalone">
+			<ChildrenList>
+				<BlendContainer Name="AMB_Underground_Corridor" ID="{257A6C87-198E-4794-802A-291AC1DBF011}" ShortID="1014117358">
+					<Comment>地下设施混凝土通风走廊：持续空气及远端机械为基底，稀疏管道与金属支架轻响。</Comment>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="AMB_Corridor_Bed_60s" ID="{7CC9B119-FE0E-4250-BD22-C68348229798}" ShortID="399399338">
+							<Comment>60秒双声道循环；原声空间与远端通风机混合，首尾交叉淡化。</Comment>
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False" />
+								<Property Name="OverridePositioning" Type="bool" Value="True" />
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB_Underground_Corridor_Loop_60s" ID="{04DF7EFE-311A-4C6E-932D-68EE20B173CA}">
+									<Language>SFX</Language>
+									<AudioFile>Corridor\AMB_Underground_Corridor_Loop_60s.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="3918125" />
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AMB_Underground_Corridor_Loop_60s" ID="{04DF7EFE-311A-4C6E-932D-68EE20B173CA}" Platform="Linked" />
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="RND_Pipe_And_Metal" ID="{EE8F9704-EBA1-4088-9382-7CE29E9AE3CD}" ShortID="303451519">
+							<Comment>Shuffle随机，避免最近2项；结束后等待7–17秒；首声3–7秒。为新增机器层留出间隔。</Comment>
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1" />
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EFB92BDD-7EC8-4A10-8664-44A1A05542B1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True" />
+													<Property Name="Max" Type="Real64" Value="2" />
+													<Property Name="Min" Type="Real64" Value="-2" />
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0" />
+								<Property Name="OverridePositioning" Type="bool" Value="True" />
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True" />
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True" />
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1" />
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="12">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0D52FCAA-DB3C-4542-8686-149A69846E3A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True" />
+													<Property Name="Max" Type="Real64" Value="5" />
+													<Property Name="Min" Type="Real64" Value="-5" />
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0" />
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2" />
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Metal_Creak_01" ID="{AC4CD529-48FA-485B-A4B1-1D59EAB78DF6}" ShortID="496883818">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{648A259D-009C-4CFF-8D3E-A70609D41CBC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="70" />
+															<Property Name="Min" Type="Real64" Value="-70" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{41F75D5E-5AA9-4757-A8BE-7B3836909EBC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="2" />
+															<Property Name="Min" Type="Real64" Value="-2" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Metal_Creak_01" ID="{F7D82B34-3ADE-43B4-9AD9-6FBCE51D2CD4}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Metal_Creak_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1020320171" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{C7646333-F2C8-4851-99E4-61BFCE899ABF}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{D165C11C-E929-4C4B-B987-F4362800DC5C}">
+													<PointList>
+														<Point>
+															<XPos>5.0</XPos>
+															<YPos>12.5</YPos>
+															<ZPos>5.0</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Metal_Creak_01" ID="{F7D82B34-3ADE-43B4-9AD9-6FBCE51D2CD4}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Metal_Creak_02" ID="{2A576830-2574-4594-803E-C5C55283C1AA}" ShortID="759716818">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9DFACF17-D48F-4D7A-AA6C-BC90BE2AC6F1}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="70" />
+															<Property Name="Min" Type="Real64" Value="-70" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6C021734-274F-493B-B363-34D69EDB7D3E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="2" />
+															<Property Name="Min" Type="Real64" Value="-2" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Metal_Creak_02" ID="{9EF29DF5-A1F0-4033-96DA-5A813E3F4AD5}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Metal_Creak_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="376357565" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{988C2552-DD82-4459-BD2D-7D6ED29511CA}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{672FECC6-C63E-4382-A4DE-1EA50D87F0E5}">
+													<PointList>
+														<Point>
+															<XPos>-5.0</XPos>
+															<YPos>30.0</YPos>
+															<ZPos>2.5</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Metal_Creak_02" ID="{9EF29DF5-A1F0-4033-96DA-5A813E3F4AD5}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Pipe_Resonance_01" ID="{9FE1A079-843F-4FE9-8228-D7E062EBB131}" ShortID="263806941">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6E5742BC-A111-4926-8A98-7CF950989F0C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="70" />
+															<Property Name="Min" Type="Real64" Value="-70" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1230741B-927C-4EC2-AA00-9B62E11F268E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="2" />
+															<Property Name="Min" Type="Real64" Value="-2" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Pipe_Resonance_01" ID="{890FDB03-414C-46C2-8CB4-2F47277C68DE}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Pipe_Resonance_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="878815544" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{6DAD3A95-71D1-4788-A9C4-8B113886186A}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{B82DBAF2-A2B2-48E5-AAA9-FEFE974374B4}">
+													<PointList>
+														<Point>
+															<XPos>-5.0</XPos>
+															<YPos>17.5</YPos>
+															<ZPos>5.0</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Pipe_Resonance_01" ID="{890FDB03-414C-46C2-8CB4-2F47277C68DE}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Pipe_Resonance_02" ID="{94EE963B-C721-47C6-989C-3737E7EC030F}" ShortID="178769117">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{39D31579-35E2-4C7F-B420-13233BB9C42F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="70" />
+															<Property Name="Min" Type="Real64" Value="-70" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D02355AC-A917-4CC8-B167-7B6AB4F5E26A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="2" />
+															<Property Name="Min" Type="Real64" Value="-2" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Pipe_Resonance_02" ID="{7CD30A97-5247-4E63-B8ED-4440BCA36DE2}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Pipe_Resonance_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="660005986" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{F2AE4FFD-32FF-4E0C-A05E-50F4A526DEC1}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{A8F8D7CC-4383-4C48-91B9-4239C2327705}">
+													<PointList>
+														<Point>
+															<XPos>7.5</XPos>
+															<YPos>27.500000000000004</YPos>
+															<ZPos>6.25</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Pipe_Resonance_02" ID="{7CD30A97-5247-4E63-B8ED-4440BCA36DE2}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Pipe_Resonance_03" ID="{902A3C7A-211F-47F7-8A00-A2D4C514E783}" ShortID="660709199">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1A847D29-879E-4B3F-81C3-01DC2465FF8A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="70" />
+															<Property Name="Min" Type="Real64" Value="-70" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2517814A-A3B0-4B42-8514-18E16E8906F8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="2" />
+															<Property Name="Min" Type="Real64" Value="-2" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Pipe_Resonance_03" ID="{567E8F6A-4877-4FF1-AE34-CCC12CD1F0E8}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Pipe_Resonance_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="360822202" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{03E33418-D4B8-4FBA-8D26-F5D50CDD3B64}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{98EF7CD9-F3E2-4360-BC02-2693CBCA1613}">
+													<PointList>
+														<Point>
+															<XPos>-3.75</XPos>
+															<YPos>42.5</YPos>
+															<ZPos>7.5</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Pipe_Resonance_03" ID="{567E8F6A-4877-4FF1-AE34-CCC12CD1F0E8}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<BlendContainer Name="AMB_Atmosphere_Layers" ID="{A7F96C01-B7B5-47B0-8CAE-47EDC73D476B}" ShortID="1060072198">
+							<Comment>增强背景：64秒深层通风与54秒微弱空间共鸣，异步循环。</Comment>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="AMB_Deep_Ventilation_Loop_64s" ID="{839ED10B-79BE-4D8E-919E-F138FD9664CD}" ShortID="200855462">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="False" />
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_Deep_Ventilation_Loop_64s" ID="{4EF10BAA-ADB3-4181-879F-08D5141BBBF8}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\AMB_Deep_Ventilation_Loop_64s.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="586020296" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_Deep_Ventilation_Loop_64s" ID="{4EF10BAA-ADB3-4181-879F-08D5141BBBF8}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AMB_Subtle_Space_Resonance_Loop_54s" ID="{F6F1344E-D364-459C-8655-6599A46CFF0D}" ShortID="711134887">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True" />
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="False" />
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AMB_Subtle_Space_Resonance_Loop_54s" ID="{4382AA9B-5B53-46CB-AC4D-59A969FCE1D3}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\AMB_Subtle_Space_Resonance_Loop_54s.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="782683431" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AMB_Subtle_Space_Resonance_Loop_54s" ID="{4382AA9B-5B53-46CB-AC4D-59A969FCE1D3}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<RandomSequenceContainer Name="RND_Distant_Mechanism" ID="{D4722062-057D-4B62-B9F5-26A624F007A7}" ShortID="497051719">
+							<Comment>较少出现的金属结构与机器工作周期。Shuffle避免重复最近1条；结束后18–34秒；首声8–14秒。</Comment>
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1" />
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FD84E8FC-6AE7-4D7F-B6A2-1C3F8A227F8F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True" />
+													<Property Name="Max" Type="Real64" Value="3" />
+													<Property Name="Min" Type="Real64" Value="-3" />
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0" />
+								<Property Name="OverridePositioning" Type="bool" Value="True" />
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True" />
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True" />
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1" />
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="26">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{67D0372B-AB85-4B0E-8420-414B612FAE93}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True" />
+													<Property Name="Max" Type="Real64" Value="8" />
+													<Property Name="Min" Type="Real64" Value="-8" />
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0" />
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Structure_Groan_01" ID="{A45C827B-E730-4E32-992C-55A3E1C752CB}" ShortID="495137811">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0864ACD3-15C7-41B5-A720-89DBAD9DAA21}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="35" />
+															<Property Name="Min" Type="Real64" Value="-35" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{17243D84-8BAA-4CCF-BCA7-38CD74EC1D00}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="1.5" />
+															<Property Name="Min" Type="Real64" Value="-1.5" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Structure_Groan_01" ID="{C579CCE1-1590-409C-9839-85F32D5E769B}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Structure_Groan_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="665857876" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{3F5CE025-2812-4416-AAF4-EDF086C1F9EE}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{EBCDF134-1F5C-47C6-B52E-B6241CC7FF51}">
+													<PointList>
+														<Point>
+															<XPos>-5.0</XPos>
+															<YPos>20.0</YPos>
+															<ZPos>5.0</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Structure_Groan_01" ID="{C579CCE1-1590-409C-9839-85F32D5E769B}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Structure_Groan_02" ID="{582E4341-8AB9-488D-8737-5C4B76DED90F}" ShortID="107646376">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D6D8745D-0E4D-4C0D-8FC6-2930351766B8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="35" />
+															<Property Name="Min" Type="Real64" Value="-35" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0391693E-0A0C-4D37-BFE9-7CAFF8A78333}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="1.5" />
+															<Property Name="Min" Type="Real64" Value="-1.5" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Structure_Groan_02" ID="{E3451738-1B12-48CA-8CBB-0080D48DE7AF}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Structure_Groan_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="350823013" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{070EE4E5-4D7A-42E9-989C-ECE4C928F60E}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{8DAD8331-136B-40BE-80D9-A8F5B01852BA}">
+													<PointList>
+														<Point>
+															<XPos>5.0</XPos>
+															<YPos>32.5</YPos>
+															<ZPos>6.25</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Structure_Groan_02" ID="{E3451738-1B12-48CA-8CBB-0080D48DE7AF}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Machine_Cycle_01" ID="{4D1A333C-D8F0-4319-A8C4-2D14330347BC}" ShortID="392772762">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{927AB25F-08AF-4244-BD11-B9296FEA9482}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="35" />
+															<Property Name="Min" Type="Real64" Value="-35" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9F44F7CA-3A6D-4651-8468-DD6BECAC2997}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="1.5" />
+															<Property Name="Min" Type="Real64" Value="-1.5" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Machine_Cycle_01" ID="{EC2C15EF-690B-4B57-9560-8BD9FC3E6186}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Machine_Cycle_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="260737070" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{3866AAD6-4417-4AED-A3CC-EC1D06954B14}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{10906939-1AD9-4718-8617-5629F72D2796}">
+													<PointList>
+														<Point>
+															<XPos>-7.5</XPos>
+															<YPos>25.0</YPos>
+															<ZPos>1.25</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Machine_Cycle_01" ID="{EC2C15EF-690B-4B57-9560-8BD9FC3E6186}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Machine_Cycle_02" ID="{17879DA0-82E8-41F8-AF7B-E94BCA0B8D83}" ShortID="826872142">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{76E07485-150F-445A-A2B6-4F6439624809}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="35" />
+															<Property Name="Min" Type="Real64" Value="-35" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{AD34B12F-12EA-480B-B213-4F881DE2E5BC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True" />
+															<Property Name="Max" Type="Real64" Value="1.5" />
+															<Property Name="Min" Type="Real64" Value="-1.5" />
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True" />
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True" />
+										<Property Name="3DSpatialization" Type="int16" Value="1" />
+										<Property Name="3DPosition" Type="int16" Value="2" />
+										<Property Name="EnableAttenuation" Type="bool" Value="True" />
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5FD4455B-A9A8-4B7B-AB21-1CF897143460}" />
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79D7899C-B48C-4E01-8295-9A0DD3ADAB80}" />
+										</Reference>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Corridor_Metal_40m" ID="{3EA44B2A-9ED3-49A2-A7E1-92EF8098BE3C}" WorkUnitID="{22333D81-69F4-4E97-88D3-DC938731D4C9}" />
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Machine_Cycle_02" ID="{0C33380F-4F22-4CC9-A2D3-94823779D7E7}">
+											<Language>SFX</Language>
+											<AudioFile>Corridor\SFX_Machine_Cycle_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="674927710" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{1CC00C21-2204-40B4-B6E6-1BA60AA09424}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True" />
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Corridor_Fixture" ID="{1A95D1A8-9E0D-4974-8073-69E6C5552FE0}">
+													<PointList>
+														<Point>
+															<XPos>7.5</XPos>
+															<YPos>35.0</YPos>
+															<ZPos>2.0</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Machine_Cycle_02" ID="{0C33380F-4F22-4CC9-A2D3-94823779D7E7}" Platform="Linked" />
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

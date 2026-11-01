@@ -1,0 +1,56 @@
+{
+  "units": "meters",
+  "axes": [
+    "right",
+    "forward",
+    "up"
+  ],
+  "maximum_attenuation_distance": 40,
+  "positions": {
+    "SFX_Pipe_Resonance_01": [
+      -2,
+      7,
+      2
+    ],
+    "SFX_Pipe_Resonance_02": [
+      3,
+      11,
+      2.5
+    ],
+    "SFX_Pipe_Resonance_03": [
+      -1.5,
+      17,
+      3
+    ],
+    "SFX_Metal_Creak_01": [
+      2,
+      5,
+      2
+    ],
+    "SFX_Metal_Creak_02": [
+      -2,
+      12,
+      1
+    ],
+    "SFX_Structure_Groan_01": [
+      -2,
+      8,
+      2
+    ],
+    "SFX_Structure_Groan_02": [
+      2,
+      13,
+      2.5
+    ],
+    "SFX_Machine_Cycle_01": [
+      -3,
+      10,
+      0.5
+    ],
+    "SFX_Machine_Cycle_02": [
+      3,
+      14,
+      0.8
+    ]
+  }
+}

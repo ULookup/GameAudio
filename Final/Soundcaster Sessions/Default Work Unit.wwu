@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WwiseDocument Type="WorkUnit" ID="{A10CF545-0F87-4BF7-A74C-082FDB59F6FF}" SchemaVersion="133">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{A10CF545-0F87-4BF7-A74C-082FDB59F6FF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="SC_Corridor_Final" ID="{EC6549DE-C032-4D20-9FB0-212EB0150BEE}">
+					<Comment>整体、三层基底、原金属短声、新机器层、深通风、共鸣层共6个试听入口。试听切换前先总停止。</Comment>
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Corridor_Ambience" ID="{702AE505-415D-4CE5-9532-E53B17E60843}" WorkUnitID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" />
+							<Position X="0" Y="0" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Bed_Only" ID="{A982659F-FE6F-437D-9BCA-B87BB7C97D3E}" WorkUnitID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" />
+							<Position X="1" Y="0" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Random_Only" ID="{F1B1A1B8-B833-47D8-8A58-D83CFA341AA6}" WorkUnitID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" />
+							<Position X="2" Y="0" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Distant_Mechanism_Only" ID="{D6ED4E8B-0123-4D21-8778-AC15D8B542D0}" WorkUnitID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" />
+							<Position X="0" Y="1" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Deep_Ventilation_Only" ID="{3C85BC9F-BAB2-469B-8F67-1A1990CB8090}" WorkUnitID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" />
+							<Position X="1" Y="1" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Space_Resonance_Only" ID="{13185EEE-6B9F-40FD-8E3E-CFC7E5BAAF19}" WorkUnitID="{4419F8DE-81A4-44E9-9B0F-3A0C4A67E039}" />
+							<Position X="2" Y="1" />
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

@@ -1,0 +1,29 @@
+# Local submission packages and handoff notes
+*.zip
+*.7z
+*.rar
+/提交邮件草稿.txt
+/提交文件清单.txt
+/提交说明与待办.md
+
+# Local environments and editor/OS files
+.tools/
+.venv/
+__pycache__/
+*.py[cod]
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Wwise cache, personal state and generated output
+.cache*/
+.backup*/
+GeneratedSoundBanks/
+*.akd
+*.prof
+*.wprof
+*.validationcache
+*.wsettings
+*.log

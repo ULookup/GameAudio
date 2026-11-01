@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "method": "Wwise authoring transport playback of Play_Bed_Only via WAAPI",
+  "event": "Play_Bed_Only",
+  "voicesPlaying": [
+    {
+      "gameObjectName": "Transport/Soundcaster",
+      "pipelineID": 27,
+      "objectName": "AMB_Deep_Ventilation_Loop_64s"
+    },
+    {
+      "gameObjectName": "Transport/Soundcaster",
+      "pipelineID": 28,
+      "objectName": "AMB_Subtle_Space_Resonance_Loop_54s"
+    },
+    {
+      "gameObjectName": "Transport/Soundcaster",
+      "pipelineID": 29,
+      "objectName": "AMB_Corridor_Bed_60s"
+    }
+  ],
+  "transportAfterStop": {
+    "state": "stopped"
+  },
+  "voicesAfterStop": []
+}
