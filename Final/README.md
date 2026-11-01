@@ -20,7 +20,6 @@ SHU261 基础实践 Final：地下避难所环境声设计。
 | 最终试听 | [完整环境混音](Preview/Corridor_Expanded_Preview.wav)，102.4 秒实际 Soundcaster 输出 |
 | 工程 | [Final.wproj](Final.wproj)，完整可编辑 Wwise 工程 |
 
-工程使用 **Wwise 2025.1.12.9287** 制作；课程指定版本为 **2025.1.11.9262**。两者存在版本差异，工程未在指定版本中打开。
 
 ## 打开与试听
 
