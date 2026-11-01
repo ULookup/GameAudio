@@ -11,6 +11,12 @@ AkWwiseProjectData.asset
 IncrementalSoundBankData.xml
 
 # Local audio tools and generated Wwise output
+/Tools/
+*.py
+*.ps1
+*.bat
+*.cmd
+*.sh
 .tools/
 .venv/
 GeneratedSoundBanks/
@@ -31,3 +37,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local processing records
+/Docs/*.json
+/Docs/FinalRequirements.md

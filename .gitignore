@@ -2,9 +2,10 @@
 *.zip
 *.7z
 *.rar
-/提交邮件草稿.txt
-/提交文件清单.txt
-/提交说明与待办.md
+/提交*.txt
+/提交*.md
+*.eml
+*.msg
 
 # Local environments and editor/OS files
 .tools/
